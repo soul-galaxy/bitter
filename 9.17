@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+struct info
+{
+       char college[20];
+       char major[20];
+       int grade;
+       char name[20];
+       int age;
+
+};
+int main()
+{
+    struct uestc a = {"management","managemant and electronic information engineering ",2020,"beicheng",21};
+    struct uestc*pb=&a;
+    strcpy(a.major,"电子商务");
+    printf("学院：%s!\n",a.college);
+    printf("专业：%s!\n",a.major);
+    printf("年级：%d!\n",a.grade);
+    printf("名字：%s!\n",a.name);
+    printf("major:%s!\n",(*pb).major);
+    a.age=20;
+    printf("年龄：%d!\n",a.age);
+    return 0;                        
+               
+}
