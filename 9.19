@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+    int year;
+    printf("请输入年份：");
+         scanf("%d",&year);
+    if(year%4==0 && year%100 != 0)
+       printf("闰年\n");
+    else if(year%400 == 0)
+       printf("闰年\n");
+    else
+       printf("不是闰年\n");
+    int s;
+    printf("请输入月份：");
+    scanf("%d\n",&s);
+    switch(s)
+    {
+    case 3:
+    case 4:
+    case 5:
+      printf("春季");
+    break;
+    case 6:
+    case 7:
+    case 8:
+      printf("夏季");
+    break;
+    case 9:
+    case 10:
+    case 11:
+      printf("秋季");
+    break;
+    case 12:
+    case 1:
+    case 2:
+      printf("冬季");
+    break;
+
+    };
+    return 0; 
+      
+}
