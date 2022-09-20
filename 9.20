@@ -1,0 +1,19 @@
+#include <stdio.h>//程序是列举满足abc+bcc=sum的所有abc和bcc的情况，等式的结构可自由更改
+int main()
+{
+    int a,b,c;
+    int sum;
+    printf("请输入想求的等式的结果：");
+    scanf("%d",&sum);
+    for(a=0;a<10;a++)
+       for(b=0;b<10;b++)
+          for(c=0;c<10;c++)
+          {
+             if(a*100+b*10+c+b*100+c*10+c==sum)
+                //printf("abc=%d%d%d\n",a,b,c);
+                printf("a=%d,b=%d,c=%d\n",a,b,c);
+                //printf("%d\n",b);
+                //printf("%d\n",c);
+           }
+    return 0;
+}
