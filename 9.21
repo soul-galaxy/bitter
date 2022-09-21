@@ -1,0 +1,22 @@
+//把年龄转化成天数
+#include <stdio.h>
+int main()
+{
+    int year;
+    int day=0;
+    int i=0;
+    int m;
+    m=2022-i;
+    printf("请输入你的年龄：");
+    scanf("%d",&year);
+    for(i=0;i<year;i++)
+       if(m%4==0 && m%100!=0)
+         day=day+366;
+       else if(m%400==0)
+         day=day+366;
+       else
+         day=day+365;
+       printf("天数是：%d",day);
+    return 0;
+    
+}
