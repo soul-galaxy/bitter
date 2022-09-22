@@ -1,0 +1,21 @@
+#include <stdio.h>//阶乘
+int main()
+{
+    int a;
+    int m;
+    int i;
+    printf("请输入要求阶乘的数：");
+    scanf("%d",&a);
+    i=a;
+    int n=a;
+    
+    while(i>1)
+    {
+       m=i-1;
+       n=n*m;
+       i--;
+     }
+    printf("%d的阶乘是%d",a,n);
+    return 0;
+    
+}
