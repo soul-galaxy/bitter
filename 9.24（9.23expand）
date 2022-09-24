@@ -1,0 +1,62 @@
+//渔夫从每年第一天开始三天打鱼两天晒网2，一年的任意一天判断渔夫是在打鱼还是在晒网
+#include <stdio.h>
+int main()
+{
+     int y,m,d;
+     int i=1;
+     int sum=0;
+     printf("请输入年份：\n");
+     scanf("%d",&y);
+     printf("请输入月份：\n");
+     scanf("%d",&m);
+     printf("请输入天号：\n");
+     scanf("%d",&d);
+     int arr1[12]={31,29,31,30,31,30,31,31,30,31,30,31};
+     int arr2[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+     if(y%4==0 && y%100!=0)
+     {
+        for(i=1;i<m;i++)
+           sum=sum+arr1[i-1];
+        sum=sum+d;
+        //printf("这是%d年的第%d天！",y,sum);
+        if(sum%5==0 || (sum-4)%5==0)
+        {
+           printf("渔夫在晒网");
+        }
+        else if((sum-3)%5==0 || (sum-2)%5==0  || (sum-1)%5==0)
+        {
+               printf("渔夫在打鱼");
+        }
+     }
+     else if(y%400==0)
+     {
+        for(i=1;i<m;i++)
+           sum=sum+arr1[i-1];
+        sum=sum+d;
+        //printf("这是%d年的第%d天！",y,sum);
+        if(sum%5==0 || (sum-4)%5==0)
+        {
+           printf("渔夫在晒网");
+        }
+        else if((sum-3)%5==0 || (sum-2)%5==0  || (sum-1)%5==0)
+        {
+               printf("渔夫在打鱼");
+        }
+     }
+     else
+     {
+        for(i=1;i<m;i++)
+           sum=sum+arr2[i-1];
+        sum=sum+d;
+        //printf("这是%d年的第%d天！",y,sum);
+        if(sum%5==0 || (sum-4)%5==0)
+        {
+           printf("渔夫在晒网");
+        }
+        else if((sum-3)%5==0 || (sum-2)%5==0  || (sum-1)%5==0)
+        {
+               printf("渔夫在打鱼");
+        }
+     }
+     return 0;
+}
