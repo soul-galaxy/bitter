@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int a;
+    int x = 10;
+    int y = x--;//后置减减
+    //int z = ++x;//前置加加
+    scanf("%d",&a);
+    int b = ~a;//按位取反
+    int c = (int)3.14;//强制类型转换，将3.14转换成int类型
+    printf("按位取反的结果是：%d\n",b);
+    printf("后置加加:%d\n",y);
+    //printf("前置加加:%d\n",z);
+    printf("此时x的值:%d\n",x);
+    int m=sizeof(c);
+    if(m=4)
+       printf("c的类型是整形\n");
+    else
+       printf("c的类型是浮点数\n");
+    return 0;
+}
