@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+  int r=896512;
+  int s;
+  int c=3;
+  while(c>0)
+  {
+     int x=c-1;
+     printf("请输入六位密码:");
+     scanf("%d",&s);
+     if(r==s)
+     {
+       printf("密码正确，登录成功！");
+       break;
+     }
+     if(r!=s)
+     {
+       printf("密码错误，你还有%d次机会！",x);
+       c--;
+      }
+  }
+  if(c==0)
+    printf("很遗憾，密码错误三次，登录失败！！！");
+  return 0;
+}
