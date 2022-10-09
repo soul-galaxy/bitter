@@ -1,0 +1,62 @@
+//第二题求一到十的阶乘的和
+/*#include <stdio.h>
+int main()
+{
+  int i=0;
+  int n=0;
+  int sum=0;
+  int ret=1;
+  for(i=1;i<11;i++)
+  {
+    ret=1;
+    for(n=1;n<=i;n++)
+    {
+      ret=ret*n;
+    }
+    sum=sum+ret;
+  }
+  printf("一到十的阶乘的和是：%d",sum);
+    return 0;
+}*/
+
+//第二题简化：每次只需要把上一次的阶乘结果再乘以最新的n然后加起来就可以，不需要每次单独计算阶乘再求和
+/*#include <stdio.h>
+int main()
+{
+  int i=0;
+  int n=0;
+  int sum=0;
+  int ret=1;
+  for(i=1;i<11;i++)
+  {
+    ret=ret*i;
+    sum=sum+ret;
+  }
+  printf("一到十的阶乘的和是：%d",sum);
+    return 0;
+}*/
+
+
+//第二题的变形：求一到n的阶乘的和
+/*#include <stdio.h>
+int main()
+{
+  int i=0;
+  int x;
+  int n=0;
+  printf("请输入要求的x：");
+  scanf("%d",&x);
+  int sum=0;
+  int ret=1;
+  for(i=1;i<=x;i++)
+  {
+    ret=1;
+    for(n=1;n<=i;n++)
+    {
+      ret=ret*n;
+    }
+    sum=sum+ret;
+  }
+  printf("一到十的阶乘的和是：%d",sum);
+    return 0;
+}*/
