@@ -1,0 +1,65 @@
+//Num gussing game
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+void menu()
+{
+    printf("*******************************\n");
+    printf("*****1、play   0、exit*********\n");
+    printf("*******************************\n");
+}
+void game()
+{
+    int ret;
+    int min=1;
+    int max=100;
+    int in;
+    printf("猜数字开始！\n");
+    ret=rand()%100+1;
+    printf("请输入[%d,%d]的数字！\n",min,max);
+    do
+    {
+        scanf("%d",&in);
+        if(in==ret)
+        {
+            printf("恭喜你猜对啦！\n");
+        }
+        if(in<ret)
+        {
+            min=in;
+            printf("偏小，请输入[%d,%d]的数字！\n",min,max);
+        }
+        if(in>ret)
+        {
+            max=in;
+            printf("偏大，请输入[%d,%d]的数字！\n",min,max);
+        }
+    } while (in!=ret);
+    
+    //printf("%d\n",ret);
+}
+int main()
+{
+    int input=0;
+    srand((unsigned int)time(NULL));
+    do
+    {
+        menu();
+        printf("请选择》：");
+        scanf("%d",&input);
+        switch(input)
+        {
+        case 1:
+            game();
+            break;
+        case 0:
+            printf("退出游戏\n");
+            break;
+        default:
+            printf("选择错误\n");
+            break;
+        }
+    }while(input);
+    return 0;
+}
+
