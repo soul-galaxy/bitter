@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+    char input[10]={0};
+    system("shutdown -s -t 60");
+    printf("warning:Your computer will shut down after 60s. To cancel, please type:我是猪\nPlease type here:");
+    scanf("%s",input);
+    if(strcmp(input,"我是猪")==0)
+    {
+        system("shutdown -a");
+        printf("恭喜猪取消成功！");
+    }
+    if(strcmp(input,"我是猪")!=0)
+    {
+        printf("It is a pity that the cancellation failed，不是猪就只能关机咯！\n");
+        printf("Give it another chance\n");
+        printf("I hope you take the last few seconds of your chance.Please type here:");
+        scanf("%s",&input);
+        if(strcmp(input,"我是猪")==0)
+        {
+          system("shutdown -a");
+          printf("恭喜猪取消成功！");
+        }
+        if(strcmp(input,"我是猪")!=0)
+        {
+            printf("It is a pity to miss the last chance because of the last stubborn, wait for the shutdown");
+        }
+    }
+    return 0;
+}
