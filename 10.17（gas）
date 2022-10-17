@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int y,z,a;
+    double m=3.25;
+    double n=3;
+    double b=2.75;
+    char input[10]={0};
+    double sum;
+    do
+    {
+        printf("请选择汽油种类【a（3.25元/千克）\nb（3元/千克）\nc（2.75元/千克）】：");
+        scanf("%s",&input);
+        printf("请输入加油量（千克）：");
+        scanf("%d",&y);
+        printf("提示：自助加油可以得到5%%的优惠，协助加油可获得10%%的优惠。\n请选择服务类型（1、自助加油  2、协助加油）:");
+        scanf("%d",&z);
+        printf("请确认你的选择：汽油种类：%s[a（3.25元/千克）,b（3元/千克）,c（2.75元/千克）],加油量：%d,服务类型：%d!\n",input,y,z);
+        printf("确认无误请选择：1、确认  2、取消重新选择\n");
+        scanf("%d",&a);
+    } while (a==2);
+
+    
+    /*printf("请选择汽油种类【a（3.25元/千克）\nb（3元/千克）\nc（2.75元/千克）】：");
+    scanf("%s",&input);
+    printf("请输入加油量（千克）：");
+    scanf("%d",&y);
+    printf("提示：自助加油可以得到5%%的优惠，协助加油可获得10%%的优惠。\n请选择服务类型（1、自助加油  2、协助加油）:");
+    scanf("%d",&z);*/
+    switch(z)
+    {
+    case 1:
+        if(strcmp(input,"a")==0)
+        {
+            sum=3.25*y*0.95;
+            printf("合计%f元！请及时缴费！",sum);
+        }
+        if(strcmp(input,"b")==0)
+        {
+            sum=3*y*0.95;
+            printf("合计%f元！请及时缴费！",sum);
+        }
+        if(strcmp(input,"c")==0)
+        {
+            sum=2.75*y*0.95;
+            printf("合计%f元！请及时缴费！",sum);
+        }
+        break;
+    case 2:
+        if(strcmp(input,"a")==0)
+        {
+            sum=3.25*y*0.9;
+            printf("合计%f元！请及时缴费！",sum);
+        }
+        if(strcmp(input,"b")==0)
+        {
+            sum=3*y*0.9;
+            printf("合计%f元！请及时缴费！",sum);
+        }
+        if(strcmp(input,"c")==0)
+        {
+            sum=2.75*y*0.9;
+            printf("合计%f元！请及时缴费！",sum);
+        }
+        break;
+    }
+    return 0;
+}
