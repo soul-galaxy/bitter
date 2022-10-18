@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main()
+{
+    float a,b,sum;
+    char c;
+    printf("请输入要计算的式子[a+(-,*,/)b]：\n");
+    scanf("%f%c%f",&a,&c,&b);
+    switch(c)
+    {
+    case '+':
+      sum=a+b;
+      printf("%f+%f=%f",a,b,sum);
+      break;
+    case '-':
+      sum=a-b;
+      printf("%f-%f=%f",a,b,sum);
+      break;
+    case '*':
+      sum=a*b;
+      printf("%f*%f=%f",a,b,sum);
+      break;
+    case '/':
+      if(b==0)
+      {
+        printf("除数不能为零，输入错误！");
+      }
+      if(b!=0)
+      {
+        sum=a/b;
+        printf("%f/%f=%f",a,b,sum);
+      }
+      break;
+    default:
+      printf("输入错误！");
+    }
+    return 0;
+}
