@@ -1,0 +1,66 @@
+/* #include <stdio.h>
+int add(int x,int y)
+{
+    int z=0;
+    z=x+y;
+    return z;
+}
+int main()
+{
+    int a,b;
+    printf("请输入第一个数：\n");
+    scanf("%d",&a);
+    printf("请输入第二个数：\n");
+    scanf("%d",&b);
+    int sum = add(a,b);
+    printf("这两个数的和是：%d",sum);
+    return 0;
+} */
+
+//数值交换函数
+/* #include <stdio.h>
+void swap1(int x,int y)
+{
+    int tmp=0;
+    tmp=x;
+    x=y;
+    y=tmp;
+}
+void swap2(int* pa,int* pb)
+{
+    int tmp=0;
+    tmp = *pa;
+    *pa = *pb;
+    *pb = tmp;     
+}
+int main()
+{
+    int a;
+    int b;
+    printf("请输入两个数：\n");
+    scanf("%d\n%d",&a,&b);
+    printf("a=%d\nb=%d\n",a,b);
+    swap1(a, b);
+    printf("swap1操作后a=%d\nb=%d\n",a,b);
+    swap2(&a, &b);
+    printf("swap2操作后a=%d\nb=%d\n",a,b);
+    return 0;
+
+} */
+
+
+//累加和
+#include <stdio.h>
+int main()
+{
+    int i=1;
+    int sum=0;
+    printf("请输入一个正整数：");
+    scanf("%d",&i);
+    for(i;i>0;i--)
+    {
+        sum=sum+i*i;
+    }
+    printf("累加和为：%d",sum);
+    return 0;
+}
