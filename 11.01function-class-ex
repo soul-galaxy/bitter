@@ -1,0 +1,144 @@
+/* #include <stdio.h>
+int add(int x,int y)
+{
+    int z=0;
+    z=x+y;
+    return z;
+}
+int main()
+{
+    int a,b;
+    printf("请输入第一个数：\n");
+    scanf("%d",&a);
+    printf("请输入第二个数：\n");
+    scanf("%d",&b);
+    int sum = add(a,b);
+    printf("这两个数的和是：%d",sum);
+    return 0;
+} */
+
+//数值交换函数
+/* #include <stdio.h>
+void swap1(int x,int y)
+{
+    int tmp=0;
+    tmp=x;
+    x=y;
+    y=tmp;
+}
+void swap2(int* pa,int* pb)
+{
+    int tmp=0;
+    tmp = *pa;
+    *pa = *pb;
+    *pb = tmp;     
+}
+int main()
+{
+    int a;
+    int b;
+    printf("请输入两个数：\n");
+    scanf("%d\n%d",&a,&b);
+    printf("a=%d\nb=%d\n",a,b);
+    swap1(a, b);
+    printf("swap1操作后a=%d\nb=%d\n",a,b);
+    swap2(&a, &b);
+    printf("swap2操作后a=%d\nb=%d\n",a,b);
+    return 0;
+
+} */
+
+//练习
+//1、用函数判断一个数是不是素数
+/* #include <stdio.h>
+int prime(int x)
+{
+    int is_prime=1;
+    int i;
+    if(x<0)
+    {
+        return -1;
+    }
+    for(i=2;i<x;i++)
+    {
+        if(x%i==0)
+        {
+            is_prime=0;
+            break;
+        }
+    }
+    return is_prime;
+}
+int main()
+{
+    int num;
+    int is_prime;
+    printf("请输入一个数：\n");
+    scanf("%d",&num);
+    is_prime=prime(num);
+    if(is_prime<0)
+    {
+        printf("输入错误，请输入一个正整数！");
+    }
+    else if(is_prime>0)
+    {
+        printf("%d是一个素数！",num);
+    }
+    else
+    {
+        printf("%d不是一个素数！",num);
+    }
+    return 0; 
+}*/
+
+//2、判断闰年的函数
+/* #include <stdio.h>
+int leap(int y)
+{
+    int is_leap;
+    if (y%4==0 && y%100!=0)
+        is_leap=1;
+    if (y%400==0)
+        is_leap=1;
+    else
+        is_leap=0;
+    return is_leap;
+}
+int main()
+{
+    int year;
+    printf("请输入年份:");
+    scanf("%d",&year);
+    int is_leap;
+    is_leap=leap(year);
+    if(is_leap>0)
+    {
+        printf("%d年是闰年！",year);
+    }
+    else
+    {
+        printf("%d年不是闰年！",year);
+    }
+    return 0;
+} */
+
+
+
+
+//4、函数每调用一次num的值加一
+#include <stdio.h>
+int add1(int x)
+{
+    int y;
+    y=x+1;
+    return y;
+}
+int main()
+{
+    int a;
+    printf("输入一个数：\na=");
+    scanf("%d",&a);
+    a=add1(a);
+    printf("a=%d",a);
+    return 0;
+}
